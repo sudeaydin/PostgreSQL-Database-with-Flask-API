@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update_konteyner/" method="POST">
+          <div class="form-group">
+            <input type="text" name="TÜR" value="{{konteynerr.TÜR}}" class="form-control" placeholder="TÜR">
+          </div>
+          <div class="form-group">
+            <input type="int" name="AGIRLIK" value="{{konteynerr.AGIRLIK}}" class="form-control" placeholder="AGIRLIK">
+          </div>
+          <div class="form-group">
+            <input type="text" name="GEMİNO" value="{{konteynerr.GEMİNO}}" class="form-control" placeholder="GEMİNO">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
